@@ -477,7 +477,7 @@
                     'States winning in concrete terms that inspire the team',
                     'Anchors every other strategic choice in the cascade'
                 ],
-                bcuContext: 'BCU\'s potential winning aspiration: "Put payday lenders out of business." Winning means members never need predatory alternatives.'
+                bcuContext: '"Put payday lenders out of business" — serve the underbanked in BCU\'s CDFI zone so members never need predatory alternatives.'
             },
             {
                 id: 'where',
@@ -490,7 +490,7 @@
                     'Selects the delivery channels (branches, digital, partners)',
                     'Clarifies what you\'re <strong>not</strong> doing'
                 ],
-                bcuContext: 'BCU\'s current "where": Credit-blemished members in the CDFI zone, with Fast Cash and Second Chance Checking as strategic products.'
+                bcuContext: 'Credit-blemished members in the CDFI zone, via Fast Cash and Second Chance Checking. Explicitly NOT downtown or mainstream banking — "our playing field is that way, not that way."'
             },
             {
                 id: 'how',
@@ -503,7 +503,7 @@
                     'BCU is clearly <strong>differentiation</strong>: you don\'t win on rates',
                     'Explains why the advantage will last over time'
                 ],
-                bcuContext: '"Say yes when others say no, and don\'t judge while doing so." This is how BCU wins through differentiation, not cost.'
+                bcuContext: '"Say yes when others say no, and don\'t judge while doing so." BCU wins through differentiation, not cost leadership — the opposite of competing on rates.'
             },
             {
                 id: 'capabilities',
@@ -516,7 +516,7 @@
                     'Reinforce one another across the credit union',
                     'May reveal gaps between "what we need" and "what we have"'
                 ],
-                bcuContext: 'Potential BCU capabilities: Underwriting non-traditional borrowers, member relationships, fast decision-making, credit counseling.'
+                bcuContext: 'Flexible underwriting for non-traditional borrowers, relationship-based service, speed of decisioning, and financial counseling. These enable saying yes when others say no.'
             },
             {
                 id: 'systems',
@@ -529,7 +529,7 @@
                     'Aligns resource allocation and incentives with priorities',
                     'Enables fast learning and course correction'
                 ],
-                bcuContext: 'Current gap: No branch profitability data, goals without clear accountability, member acquisition metrics unclear.'
+                bcuContext: 'Still emerging — to be developed through the engagement. Current gaps include no branch profitability data, goals without clear accountability, and unclear member acquisition metrics.'
             }
         ];
 
@@ -567,6 +567,13 @@
                     "Practice strategic thinking with external examples"
                 ],
                 homework: "Draft answers to the 5 questions for BCU as it operates TODAY. Not what you wish it was, but what it actually is right now. Complete independently.",
+                keyTakeaways: [
+                    "Team recognized they have plans, not strategy: \"Our strategic plan is just a plan. There is no strategy in it.\"",
+                    "Alignment discovered: \"Serve people others won't\" as core differentiator",
+                    "Fast Cash program identified as strategic asset — a real alternative to payday lending",
+                    "63% of account closures are dormant/abuse accounts — reframed what \"member loss\" actually means",
+                    "First time working together as a team on strategy (not siloed operational work)"
+                ],
                 whyThisMatters: "Strategy work must start with a common language. Without shared concepts, teams talk past each other.",
                 icon: 'W1'
             },
@@ -954,6 +961,14 @@
                         <p class="text-base text-on-tertiary-container/90 font-medium">${step.deliverable}</p>
                     </div>` : '';
 
+                let keyTakeawaysHtml = step.keyTakeaways ? `
+                    <div class="mt-4 bg-tertiary-container/20 rounded-lg p-4 border border-tertiary-container/40">
+                        <h4 class="text-base font-medium text-on-tertiary-container mb-2">Key Takeaways:</h4>
+                        <ul class="list-disc list-outside ml-5 text-on-tertiary-container/90 space-y-1 text-base">
+                            ${step.keyTakeaways.map(t => `<li>${t}</li>`).join('')}
+                        </ul>
+                    </div>` : '';
+
                 let whyThisMattersHtml = step.whyThisMatters ? `
                     <div class="mt-4 bg-surface-variant/40 rounded-lg p-4">
                         <h4 class="text-base font-medium text-on-surface mb-1">Why This Matters:</h4>
@@ -984,6 +999,7 @@
                         <div class="pt-2 pb-6 px-6">
                             <p class="text-base text-on-surface-variant mb-4"><strong>Format:</strong> ${step.format}</p>
                             ${goalsHtml}
+                            ${keyTakeawaysHtml}
                             ${whyThisMattersHtml}
                             ${homeworkHtml}
                             ${deliverableHtml}
